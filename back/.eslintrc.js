@@ -1,3 +1,3 @@
 module.exports = {
-  extends: 'gigigo-standard'
+  extends: 'gigigo-standard/node'
 }
