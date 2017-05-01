@@ -9,11 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "cors": "^2.8.3",
     "debug": "^2.6.6",
     "express": "^4.15.2",
     "express-deliver": "0.0.9",
-    "fs-extra": "^3.0.0"
+    "fs-extra": "^3.0.0",
+    "morgan": "^1.8.1",
+    "morgana": "^1.0.4"
   },
   "devDependencies": {
     "cross-env": "^4.0.0",

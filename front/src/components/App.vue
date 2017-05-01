@@ -1,14 +1,13 @@
 <template>
     <section class="app section">
-        hola
+        <Panel/>
     </section>
 </template>
 
 <script>
+import Panel from './Panel'
 export default {
-    created(){
-        console.log('created')
-    }
+    components:{Panel}
 }
 </script>
 

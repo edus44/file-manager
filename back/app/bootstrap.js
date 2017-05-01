@@ -1,17 +1,21 @@
 'use strict'
 
+const morgan = require('morgan')
 const cors = require('cors')
-const expressDeliver = require('express-deliver')
-const debugError = require('debug')('app:error')
+const bodyParser = require('body-parser')
+const expressDeliver = require('express-deliver-2')
+
+require('./exceptions')
 
 module.exports = app => {
+
+    expressDeliver(app)
+
+    app.use(morgan('dev'))
     app.use(cors())
-    app.use(expressDeliver)
+    app.use(bodyParser.json())
 
     require('./routes')(app)
 
-    expressDeliver.handlers(app)
-    app.on('error',err=>{
-        debugError('deliver-error',err)
-    })
+    expressDeliver.errorHandler(app)
 }
